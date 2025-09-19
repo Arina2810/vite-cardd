@@ -1,0 +1,91 @@
+*,
+/*e у всех элементов*/
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+  background-image: url(../img/fon-gif-1.gif);
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  font-family: "Rubik Mono One", monospace;
+
+}
+
+header {
+  background-color: rgb(168, 190, 236);
+  padding: 20px 15px;
+}
+
+h1 {
+  text-align: center;
+  color: rgb(86, 41, 145);
+
+}
+
+footer {
+  background-color: rgb(129, 144, 185);
+  padding: 20px 15px;
+}
+
+.copy-text {
+  color: rgb(65, 70, 87);
+  text-align: center;
+  position: relative;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 300px;
+  height: 350px;
+  border: 5px solid rgb(86, 41, 145);
+  transform-style: preserve-3d;
+  border-radius: 15px;
+  box-shadow: rgb(157, 139, 233) 0 0 6px 2px;
+  transition: 0.5s transform ease-in-out;
+  background-color: rgb(217, 222, 252);
+}
+
+
+.card::after {
+  content: "11";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 290px;
+  height: 340px;
+  border-radius: 10px;
+  background-size: 250px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  backface-visibility: hidden;
+  background-color: rgb(172, 172, 209);
+  transform: rotateY(180deg);
+
+}
+
+.card-show {
+  transform: rotateY(180deg);
+}
+
+.container {
+  display: grid;
+  text-align: center;
+  width: 100%;
+  justify-content: center;
+  gap: 50px;
+  margin: 50px auto;
+}
